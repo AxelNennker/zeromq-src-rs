@@ -1,10 +1,9 @@
 use cmake::Config;
 
 use std::{
-    fmt,
+    env, fmt,
     fs::read_dir,
     path::{Path, PathBuf},
-    env,
 };
 
 pub fn source_dir() -> PathBuf {
@@ -91,7 +90,7 @@ pub struct Build {
     enable_draft: bool,
     build_debug: bool,
     link_static: bool,
-    perf_tool: bool
+    perf_tool: bool,
 }
 
 impl Build {
