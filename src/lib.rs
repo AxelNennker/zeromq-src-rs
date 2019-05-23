@@ -172,7 +172,10 @@ impl Build {
             name: "zmq".to_owned(),
         });
 
-        if target.contains("apple") || target.contains("freebsd") || target.contains("openbsd") {
+        if target.contains("apple")
+            || target.contains("freebsd")
+            || target.contains("openbsd")
+        {
             libs.push(Lib {
                 link_type: Some(LinkType::Dynamic),
                 name: "c++".to_owned(),
